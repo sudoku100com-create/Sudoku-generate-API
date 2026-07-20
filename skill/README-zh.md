@@ -197,7 +197,7 @@ const tool = new langchain.tools.Tool({
 
 - 随机: `https://www.sudoku100.com/sudoku-img`
 - 按难度: `https://www.sudoku100.com/sudoku-img/{difficulty}`
-- 按 ID: `https://www.sudoku100.com/id/{id}?width={width}&format={format}`
+- 按 ID: `https://www.sudoku100.com/img-id/{id}?width={width}&format={format}`
 
 ## 难度级别
 

@@ -82,13 +82,13 @@ https://www.sudoku100.com/sudoku-img/medium
 
 ### 4. Get by ID
 
-- **URL:** `https://www.sudoku100.com/id/{id}`
+- **URL:** `https://www.sudoku100.com/img-id/{id}`
 - **Parameters:**
   - `id`: Sudoku puzzle ID (1-10000)
 - **Features:** Get the same Sudoku puzzle by ID
-- **Example:** `https://www.sudoku100.com/id/238`
+- **Example:** `https://www.sudoku100.com/img-id/238`
 
-![Puzzle ID 238](https://www.sudoku100.com/id/238?width=400\&format=png)
+![Puzzle ID 238](https://www.sudoku100.com/img-id/238?width=400\&format=png)
 
 ## Large Language Model Application Examples
 
@@ -135,7 +135,7 @@ https://www.sudoku100.com/sudoku-img/medium
 ### Example 9: Specific Puzzle ID
 
 **Prompt:** "Load puzzle number 500, my friend solved it last week"
-**API Call:** `https://www.sudoku100.com/id/500`
+**API Call:** `https://www.sudoku100.com/img-id/500`
 
 ### Example 10: Embed Interactive Game
 

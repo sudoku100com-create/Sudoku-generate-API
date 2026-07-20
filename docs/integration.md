@@ -14,7 +14,7 @@
 
 ### Custom Size and Format
 ```html
-<img src="https://www.sudoku100.com/id/238?width=500&format=png" alt="Custom Sudoku">
+<img src="https://www.sudoku100.com/img-id/238?width=500&format=png" alt="Custom Sudoku">
 ```
 
 ## Website Integration
@@ -130,7 +130,7 @@ function handleSudokuRequest(prompt) {
     if (response.action === 'generate_sudoku' && response.parameters.difficulty && response.parameters.difficulty !== 'random') {
       url += `/${response.parameters.difficulty}`;
     } else if (response.action === 'get_sudoku_by_id' && response.parameters.id) {
-      url = `https://www.sudoku100.com/id/${response.parameters.id}`;
+      url = `https://www.sudoku100.com/img-id/${response.parameters.id}`;
     } else if (response.action === 'customize_sudoku') {
       const width = response.parameters.width || 500;
       const format = response.parameters.format || 'png';
@@ -262,7 +262,7 @@ public class SudokuActivity extends AppCompatActivity {
 **Result:** Use `https://www.sudoku100.com/sudoku-img/expert`
 
 **Prompt:** "Show me puzzle number 500 in 800px width"
-**Result:** Use `https://www.sudoku100.com/id/500?width=800`
+**Result:** Use `https://www.sudoku100.com/img-id/500?width=800`
 
 ## URL Patterns
 
@@ -274,12 +274,12 @@ Generates a new Sudoku puzzle with each request.
 
 ### Static by ID
 ```
-https://www.sudoku100.com/id/{id}?width={width}&format={format}
+https://www.sudoku100.com/img-id/{id}?width={width}&format={format}
 ```
 
 ### Examples:
 - `https://www.sudoku100.com/sudoku-img/easy`
-- `https://www.sudoku100.com/id/500?width=800&format=png`
+- `https://www.sudoku100.com/img-id/500?width=800&format=png`
 - `https://www.sudoku100.com/sudoku-img/medium?width=600&format=webp`
 
 ## Difficulty Levels

@@ -45,7 +45,7 @@ const SudokuApiMCP = {
     ],
     templates: {
       generate_sudoku: "To generate a Sudoku puzzle, use: https://www.sudoku100.com/sudoku-img/{difficulty} or https://www.sudoku100.com/sudoku-img for random",
-      get_sudoku_by_id: "To get a specific Sudoku puzzle, use: https://www.sudoku100.com/id/{id}",
+      get_sudoku_by_id: "To get a specific Sudoku puzzle, use: https://www.sudoku100.com/img-id/{id}",
       customize_sudoku: "To customize a Sudoku puzzle, use: https://www.sudoku100.com/sudoku-img?width={width}&format={format}"
     }
   },

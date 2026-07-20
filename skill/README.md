@@ -197,7 +197,7 @@ const tool = new langchain.tools.Tool({
 
 - Random: `https://www.sudoku100.com/sudoku-img`
 - By difficulty: `https://www.sudoku100.com/sudoku-img/{difficulty}`
-- By ID: `https://www.sudoku100.com/id/{id}?width={width}&format={format}`
+- By ID: `https://www.sudoku100.com/img-id/{id}?width={width}&format={format}`
 
 ## Difficulty Levels
 

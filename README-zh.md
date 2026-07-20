@@ -82,13 +82,13 @@ https://www.sudoku100.com/sudoku-img/medium
 
 ### 4. 按 ID 获取
 
-- **URL:** `https://www.sudoku100.com/id/{id}`
+- **URL:** `https://www.sudoku100.com/img-id/{id}`
 - **参数:**
   - `id`: 数独谜题 ID (1-10000)
 - **特点:** 通过 ID 获取相同的数独谜题
-- **示例:** `https://www.sudoku100.com/id/238`
+- **示例:** `https://www.sudoku100.com/img-id/238`
 
-![谜题编号 238](https://www.sudoku100.com/id/238?width=400\&format=png)
+![谜题编号 238](https://www.sudoku100.com/img-id/238?width=400\&format=png)
 
 ## 大模型应用示例
 
@@ -135,7 +135,7 @@ https://www.sudoku100.com/sudoku-img/medium
 ### 示例 9: 特定谜题 ID
 
 **提示词:** "加载编号500的谜题，我朋友上周解过"
-**API 调用:** `https://www.sudoku100.com/id/500`
+**API 调用:** `https://www.sudoku100.com/img-id/500`
 
 ### 示例 10: 嵌入互动游戏
 

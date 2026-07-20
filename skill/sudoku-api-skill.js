@@ -72,7 +72,7 @@ const SudokuApiSkill = {
                 throw new Error("Parameter 'id' is required for get_by_id action");
             }
             const diff = difficulty || "easy";
-            const url = `https://www.sudoku100.com/id/${id}`;
+            const url = `https://www.sudoku100.com/img-id/${id}`;
             return {
                 success: true,
                 data: {
@@ -91,7 +91,7 @@ const SudokuApiSkill = {
         if (id) {
             // Generate with specific ID
             const diff = difficulty || "easy";
-            url = `https://www.sudoku100.com/id/${id}`;
+            url = `https://www.sudoku100.com/img-id/${id}`;
         } else if (difficulty) {
             // Generate with difficulty
             url = `https://www.sudoku100.com/sudoku-img/${difficulty}`;

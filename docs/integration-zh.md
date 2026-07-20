@@ -14,7 +14,7 @@
 
 ### 自定义尺寸和格式
 ```html
-<img src="https://www.sudoku100.com/id/238?width=500&format=png" alt="自定义数独">
+<img src="https://www.sudoku100.com/img-id/238?width=500&format=png" alt="自定义数独">
 ```
 
 ## 网站集成
@@ -130,7 +130,7 @@ function handleSudokuRequest(prompt) {
     if (response.action === 'generate_sudoku' && response.parameters.difficulty && response.parameters.difficulty !== 'random') {
       url += `/${response.parameters.difficulty}`;
     } else if (response.action === 'get_sudoku_by_id' && response.parameters.id) {
-      url = `https://www.sudoku100.com/id/${response.parameters.id}`;
+      url = `https://www.sudoku100.com/img-id/${response.parameters.id}`;
     } else if (response.action === 'customize_sudoku') {
       const width = response.parameters.width || 500;
       const format = response.parameters.format || 'png';
@@ -236,12 +236,12 @@ https://www.sudoku100.com/sudoku-img
 
 ### 按 ID 获取
 ```
-https://www.sudoku100.com/id/{id}?width={width}&format={format}
+https://www.sudoku100.com/img-id/{id}?width={width}&format={format}
 ```
 
 ### 示例：
 - `https://www.sudoku100.com/sudoku-img?difficulty=easy`
-- `https://www.sudoku100.com/id/500?width=800&format=png`
+- `https://www.sudoku100.com/img-id/500?width=800&format=png`
 - `https://www.sudoku100.com/sudoku-img?difficulty=medium&width=600&format=webp`
 
 ## 难度级别
