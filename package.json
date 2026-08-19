@@ -1,0 +1,52 @@
+{
+  "name": "sudoku-api-mcp",
+  "version": "1.0.0",
+  "description": "Sudoku100 API MCP Server - 无需注册、无需 API 密钥的数独谜题生成 MCP，支持 6 级难度和 4 种图片格式",
+  "main": "mcp/sudoku-api-mcp.js",
+  "exports": {
+    ".": "./mcp/sudoku-api-mcp.js",
+    "./skill": "./skill/sudoku-api-skill.js",
+    "./mcp": "./mcp/sudoku-api-mcp.js"
+  },
+  "files": [
+    "mcp/",
+    "skill/",
+    "server.json",
+    "README.md",
+    "README-zh.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "sudoku",
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "sudoku-generator",
+    "puzzle",
+    "claude",
+    "cursor",
+    "codex",
+    "ai-tools",
+    "sudoku-api",
+    "skill",
+    "function-calling",
+    "openai-tools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudoku100com-create/Sudoku-generate-API.git"
+  },
+  "homepage": "https://www.sudoku100.com",
+  "author": "Sudoku100",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sudoku100com-create/Sudoku-generate-API/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "publish:mcp": "bash scripts/publish-mcp.sh",
+    "publish:update": "bash scripts/publish-mcp.sh --update"
+  }
+}

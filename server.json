@@ -1,0 +1,85 @@
+{
+  "name": "sudoku-api-mcp",
+  "version": "1.0.0",
+  "description": "Sudoku100 API - 无需注册、无需 API 密钥的公共数独谜题生成服务。支持 6 级难度（beginner/easy/medium/hard/expert/extreme）、4 种图片格式（PNG/WebP/SVG/JPG）、自定义尺寸（100-1000px）和按 ID 获取谜题。",
+  "vendor": "Sudoku100",
+  "sourceUrl": "https://github.com/sudoku100com-create/Sudoku-generate-API",
+  "homepage": "https://www.sudoku100.com",
+  "license": "MIT",
+  "runtime": "node",
+  "entrypoint": {
+    "command": "npx",
+    "args": ["-y", "sudoku-api-mcp"]
+  },
+  "tools": [
+    {
+      "name": "generate_sudoku",
+      "description": "生成指定难度的数独谜题图片。支持 6 级难度：beginner(45-50提示)/easy(38-44)/medium(32-37)/hard(26-31)/expert(20-25)/extreme(17-19)。每道题都有唯一解保证。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "difficulty": {
+            "type": "string",
+            "enum": ["beginner", "easy", "medium", "hard", "expert", "extreme"],
+            "description": "数独难度级别"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 100,
+            "maximum": 1000,
+            "default": 500,
+            "description": "图片宽度（像素）"
+          },
+          "format": {
+            "type": "string",
+            "enum": ["png", "webp", "svg", "jpg"],
+            "default": "png",
+            "description": "图片输出格式"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_sudoku_by_id",
+      "description": "通过 ID 获取特定的数独谜题，保证同一 ID 始终返回同一道题，适合需要重复获取同一道题进行练习或分享的场景。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10000,
+            "description": "数独谜题 ID"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 100,
+            "maximum": 1000,
+            "default": 500,
+            "description": "图片宽度（像素）"
+          },
+          "format": {
+            "type": "string",
+            "enum": ["png", "webp", "svg", "jpg"],
+            "default": "png",
+            "description": "图片输出格式"
+          }
+        },
+        "required": ["id"]
+      }
+    },
+    {
+      "name": "list_difficulties",
+      "description": "列出所有可用的数独难度级别及其提示数范围",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false
+  }
+}
