@@ -25,6 +25,10 @@ info:
 servers:
   - url: https://www.sudoku100.com
     description: Production
+# The Sudoku100 API is free and requires no authentication.
+# Declaring an empty global `security` array explicitly states that
+# no security scheme applies to any operation in this spec.
+security: []
 externalDocs:
   description: GitHub Repository
   url: https://github.com/sudoku100com-create/Sudoku-generate-API
