@@ -4,6 +4,8 @@
 
 A public Sudoku generation API that requires no registration or API key, similar to picsum photos.
 
+To play Sudoku online, visit the official website: https://www.sudoku100.com
+
 ## Core Advantages
 
 ### 🔥 Algorithm Advantages
@@ -231,10 +233,8 @@ https://www.sudoku100.com/sudoku-img/medium
 
 This project provides complete Skill and MCP implementations for large model integration:
 
-- **Skill** - Located in `skill/` directory, providing standardized API call interface
-- **MCP** - Located in `mcp/` directory, providing model context protocol support
-
-For detailed usage instructions, please refer to the README.md files in their respective directories.
+- **Skill** - Located in `skill/` directory, providing standardized API call interface (see `skill/SKILL.md`)
+- **MCP** - Located in `mcp/` directory, providing model context protocol support (see `mcp/README.md`)
 
 ## Usage Scenarios
 
@@ -272,3 +272,8 @@ MIT License - Free to use and modify
 ## Feedback
 
 If you have any questions or suggestions, please submit them through GitHub Issues.
+
+## Links
+
+- Website: https://www.sudoku100.com
+- GitHub: https://github.com/sudoku100com-create/Sudoku-generate-API

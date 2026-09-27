@@ -1,9 +1,7 @@
 .git
 .gitignore
 scripts/
-assets/
 docs/
-index.html
 git-push.sh
 *.log
 node_modules

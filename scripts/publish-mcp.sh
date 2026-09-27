@@ -114,7 +114,7 @@ check_prerequisites() {
     exit 1
   fi
 
-  for f in package.json server.json mcp/sudoku-api-mcp.js skill/sudoku-api-skill.js README.md; do
+  for f in package.json server.json mcp/sudoku-api-mcp.js skill/SKILL.md skill/scripts/sudoku-api-skill.js README.md; do
     if [ -f "$f" ]; then
       print_ok "文件 $f 存在"
     else
@@ -152,13 +152,13 @@ sync_version() {
   fi
 
   # 更新 skill JS
-  if [ -f skill/sudoku-api-skill.js ]; then
+  if [ -f skill/scripts/sudoku-api-skill.js ]; then
     if [[ "$OSTYPE" == "darwin"* ]]; then
-      sed -i '' "s/version: \"[0-9.]*\"/version: \"${VERSION}\"/" skill/sudoku-api-skill.js
+      sed -i '' "s/version: \"[0-9.]*\"/version: \"${VERSION}\"/" skill/scripts/sudoku-api-skill.js
     else
-      sed -i "s/version: \"[0-9.]*\"/version: \"${VERSION}\"/" skill/sudoku-api-skill.js
+      sed -i "s/version: \"[0-9.]*\"/version: \"${VERSION}\"/" skill/scripts/sudoku-api-skill.js
     fi
-    print_ok "skill/sudoku-api-skill.js 版本已同步"
+    print_ok "skill/scripts/sudoku-api-skill.js 版本已同步"
   fi
 }
 
@@ -216,7 +216,7 @@ github_push() {
   print_step "GitHub 推送"
 
   git add scripts/ package.json server.json .npmignore 2>/dev/null || true
-  git add mcp/sudoku-api-mcp.js skill/sudoku-api-skill.js 2>/dev/null || true
+  git add mcp/sudoku-api-mcp.js skill/SKILL.md skill/scripts/sudoku-api-skill.js 2>/dev/null || true
 
   if git diff --cached --quiet 2>/dev/null; then
     print_info "没有需要提交的更改"
@@ -399,7 +399,7 @@ check_status() {
   echo ""
 
   echo -e "  ${BOLD}配置文件:${NC}"
-  for f in package.json server.json mcp/sudoku-api-mcp.js skill/sudoku-api-skill.js; do
+  for f in package.json server.json mcp/sudoku-api-mcp.js skill/SKILL.md skill/scripts/sudoku-api-skill.js; do
     if [ -f "$f" ]; then
       echo -e "    ✅ $f"
     else

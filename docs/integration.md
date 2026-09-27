@@ -101,7 +101,7 @@
 
 ### Using Skill
 ```javascript
-const SudokuApiSkill = require('./skill/sudoku-api-skill');
+const SudokuApiSkill = require('./skill/scripts/sudoku-api-skill');
 
 // Generate Sudoku puzzle
 async function generateSudoku(difficulty = 'medium') {

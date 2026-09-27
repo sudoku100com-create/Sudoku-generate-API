@@ -4,6 +4,8 @@
 
 一个无需注册、无需 API 密钥的公共数独生成 API，类似于 picsum photos。
 
+如需在线玩数独，请访问官网：https://www.sudoku100.com
+
 ## 核心优势
 
 ### 🔥 算法优势
@@ -231,10 +233,8 @@ https://www.sudoku100.com/sudoku-img/medium
 
 本项目提供了完整的 Skill 和 MCP 实现，便于大模型集成：
 
-- **Skill** - 位于 `skill/` 目录，提供标准化的 API 调用接口
-- **MCP** - 位于 `mcp/` 目录，提供模型上下文协议支持
-
-详细使用说明请参考各自目录下的 README.md 文件。
+- **Skill** - 位于 `skill/` 目录，提供标准化的 API 调用接口（见 `skill/SKILL.md`）
+- **MCP** - 位于 `mcp/` 目录，提供模型上下文协议支持（见 `mcp/README.md`）
 
 ## 使用场景
 
@@ -272,4 +272,9 @@ MIT 许可证 - 可自由使用和修改
 ## 反馈
 
 如有问题或建议，请通过 GitHub Issues 提交。
+
+## 链接
+
+- 官网：https://www.sudoku100.com
+- GitHub：https://github.com/sudoku100com-create/Sudoku-generate-API
 

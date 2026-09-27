@@ -1,6 +1,6 @@
 {
   "name": "sudoku-api-mcp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Sudoku100 API - 无需注册、无需 API 密钥的公共数独谜题生成服务。支持 6 级难度（beginner/easy/medium/hard/expert/extreme）、4 种图片格式（PNG/WebP/SVG/JPG）、自定义尺寸（100-1000px）和按 ID 获取谜题。",
   "vendor": "Sudoku100",
   "sourceUrl": "https://github.com/sudoku100com-create/Sudoku-generate-API",
