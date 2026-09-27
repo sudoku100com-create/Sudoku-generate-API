@@ -222,3 +222,22 @@ const SudokuApiSkill = {
 };
 
 module.exports = SudokuApiSkill;
+
+// CLI entry: node sudoku-api-skill.js [--difficulty hard] [--id 238] [--width 800] [--format webp] [--action generate]
+if (require.main === module) {
+  const args = process.argv.slice(2);
+  const params = {};
+  for (let i = 0; i < args.length; i += 2) {
+    const key = String(args[i] || "").replace(/^--/, "");
+    const value = args[i + 1];
+    if (key === "id" || key === "width") {
+      params[key] = parseInt(value, 10);
+    } else {
+      params[key] = value;
+    }
+  }
+  SudokuApiSkill.invoke(params).then((result) => {
+    console.log(JSON.stringify(result, null, 2));
+    process.exit(result.success ? 0 : 1);
+  });
+}
